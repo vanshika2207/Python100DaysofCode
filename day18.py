@@ -80,3 +80,39 @@ import random
 # size_of_gap(1)
 # screen=Screen()
 # screen.exitonclick()
+##final project
+# import colorgram
+# colors=colorgram.extract('art.png',20)
+#
+# a=[]
+# for i in range(len(colors)):
+#     r=colors[i].rgb[0]
+#     g=colors[i].rgb[1]
+#     b=colors[i].rgb[2]
+#     rgb=(r,g,b)
+#     a.append(rgb)
+# print(a)
+from turtle import Turtle,Screen
+import random
+colors=[(238, 228, 217), (217, 157, 97), (125, 166, 192), (45, 109, 149), (214, 232, 223), (236, 216, 223), (201, 138, 159), (151, 67, 89), (127, 183, 157), (211, 225, 234), (35, 131, 99), (211, 92, 65), (233, 199, 105), (163, 76, 57), (192, 87, 114), (165, 159, 46), (65, 165, 135), (232, 165, 182), (42, 158, 186), (16, 95, 70)]
+tim=Turtle()
+# Set the color mode to 255 for RGB tuples
+Screen().colormode(255)
+tim.speed("fastest")
+tim.pu()
+tim.hideturtle()
+tim.setheading(225)
+tim.forward(100)
+tim.setheading(0)
+number_of_dots=100
+for dot_count in range(1,number_of_dots+1):
+    tim.dot(20,random.choice(colors))
+    tim.forward(50)
+    if dot_count%10==0:
+        tim.setheading(90)
+        tim.forward(50)
+        tim.setheading(180)
+        tim.forward(500)
+        tim.setheading(0)
+screen=Screen()
+screen.exitonclick()
